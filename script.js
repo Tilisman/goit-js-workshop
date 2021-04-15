@@ -15,7 +15,39 @@
 
 // const courseTopic = 'JavaSript для начинающих';
 // console.log(courseTopic.length);
-//* #33
+
+/* function getShippingCost(country) {
+    let message;
+    // Пиши код ниже этой строки
+    let price;
+    switch (country) { // Дополни эту строку
+        case 'Китай': // Дополни эту строку
+            price = 100; // Дополни эту строку
+            break;
+
+        case 'Чили': // Дополни эту строку
+            price = 250; // Дополни эту строку
+            break;
+
+        case 'Австралия': // Дополни эту строку
+            price = 170; // Дополни эту строку
+            break;
+        case 'Ямайка': // Дополни эту строку
+            price = 120; // Дополни эту строку
+            break;
+
+        default:
+            console.log('Извините, в вашу страну доставки нет');
+    }
+    message = `Доставка в ${country} будет стоить ${price} кредитов`;
+    console.log(message);
+
+// Пиши код выше этой строки
+return message;
+}
+getShippingCost('111');
+
+ */ //* #33
 /* function formatMessage(message, maxLength) {
     let result;
     // Пиши код ниже этой строки
@@ -58,26 +90,134 @@ checkForSpam('Get best sale offers now!'); */
 
 
 // function makeOrderMessage(orderedQuantity, pricePerDroid, deliveryFee) {
-//     // Пиши код ниже этой строки
-
 
 //     const message = `Вы заказали дроидов на сумму ${orderedQuantity * pricePerDroid + deliveryFee} кредитов. Доставка (${deliveryFee} кредитов) включена в сумму заказа.`;
 
-//     // Пиши код выше этой строки
 //     console.log(message);
 //     return message;
 // }
 // makeOrderMessage(2, 100, 50);
 
 //* ============MODULE-2============== *//
+//* #9
+/* function getExtremeElements(array) {
+    
+    const answerArray = [];
+    answerArray.push(array[0], array[array.length - 1]);
 
-function getExtremeElements(array) {
+    console.log(answerArray);
+    return answerArray;
+    
+}
+
+getExtremeElements([1, 2, 3, 4, 5]); */
+
+//* #11
+
+/* function calculateEngravingPrice(message, pricePerWord) {
     // Пиши код ниже этой строки
+    let wordsCounter = message.split(' ');
+    const totalPrice = wordsCounter.length * pricePerWord;
 
-    array = array[0], array[array.length - 1];
+    console.log(totalPrice);
+    return totalPrice
+        // Пиши код выше этой строки
+}
+
+calculateEngravingPrice('JavaScript у меня в крови', 10); */
+function splitMessage(message, delimeter) {
+    let words;
+    // Пиши код ниже этой строки
+    words = message.split(delimeter);
+    // words = toString(words);
+    console.log(typeof(words));
+    console.log(words);
+
+
+    // Пиши код выше этой строки
+    return words;
+}
+splitMessage('Mango');
+
+/* function makeStringFromArray(array, delimeter) {
+    let string;
+    // Пиши код ниже этой строки
     console.log(array);
-    return array;
+    string = array.join(delimeter);
+    console.log(string);
+
+    // Пиши код выше этой строки
+    return string;
+}
+
+makeStringFromArray(['лучшее', 'за', 'неделю'], '_');
+ */
+
+//* #13
+
+/* function slugify(title) {
+    // Пиши код ниже этой строки
+    const array = title.split(' ');
+    const slugString = array.join('-');
+
+    console.log(slugString.toLowerCase());
+    return slugString.toLowerCase();
     // Пиши код выше этой строки
 }
 
-getExtremeElements([1, 2, 3, 4, 5]);
+slugify('Английский для разработчика'); */
+
+//*  #18
+const arr = [15, 27, 32, 4];
+
+/* function calculateTotalPrice(order) {
+    // Пиши код ниже этой строки
+
+    let sum = 0;
+    for (let i = 0; i < order.length; i++)
+        sum += order[i];
+    console.log(sum);
+
+    // Пиши код выше этой строки
+}
+calculateTotalPrice(arr); */
+
+//! !!!#21!!! TODO: Разобраться почему [1]
+
+/* function findLongestWord(string) {
+    // Пиши код ниже этой строки
+    let strArr = string.split(' ');
+    let wordLength = 0;
+    let longestWord;
+    console.log(strArr);
+    for (let i = 0; i < strArr.length; i++) {
+        wordLength = strArr[1].length;
+        console.log(wordLength);
+        if (strArr[i].length > wordLength) {
+            longestWord = strArr[i];
+
+            return longestWord;
+        }
+
+
+
+    }
+    // Пиши код выше этой строки
+}
+
+console.log(findLongestWord('Google do a roll')); */
+
+//* #22
+
+/* function createArrayOfNumbers(min, max) {
+    let numbers = [];
+    // Пиши код ниже этой строки
+    for (let i = min; i <= max; i++)
+        numbers.push(i);
+    // Пиши код выше этой строки
+    console.log(numbers);
+    return numbers;
+}
+createArrayOfNumbers(1, 3); */
+
+//* #23
