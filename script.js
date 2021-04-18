@@ -98,7 +98,7 @@ checkForSpam('Get best sale offers now!'); */
 // }
 // makeOrderMessage(2, 100, 50);
 
-//* ============MODULE-2============== *//
+//! ============MODULE-2============== *//
 //* #9
 /* function getExtremeElements(array) {
     
@@ -125,7 +125,7 @@ getExtremeElements([1, 2, 3, 4, 5]); */
 }
 
 calculateEngravingPrice('JavaScript у меня в крови', 10); */
-function splitMessage(message, delimeter) {
+/* function splitMessage(message, delimeter) {
     let words;
     // Пиши код ниже этой строки
     words = message.split(delimeter);
@@ -137,7 +137,7 @@ function splitMessage(message, delimeter) {
     // Пиши код выше этой строки
     return words;
 }
-splitMessage('Mango');
+splitMessage('Mango'); */
 
 /* function makeStringFromArray(array, delimeter) {
     let string;
@@ -168,9 +168,9 @@ makeStringFromArray(['лучшее', 'за', 'неделю'], '_');
 slugify('Английский для разработчика'); */
 
 //*  #18
-const arr = [15, 27, 32, 4];
+/*const arr = [15, 27, 32, 4];
 
-/* function calculateTotalPrice(order) {
+ function calculateTotalPrice(order) {
     // Пиши код ниже этой строки
 
     let sum = 0;
@@ -184,15 +184,15 @@ calculateTotalPrice(arr); */
 
 //! !!!#21!!! TODO: Разобраться почему [1]
 
-/* function findLongestWord(string) {
+function findLongestWord(string) {
     // Пиши код ниже этой строки
     let strArr = string.split(' ');
     let wordLength = 0;
     let longestWord;
-    console.log(strArr);
+    console.table(strArr);
     for (let i = 0; i < strArr.length; i++) {
         wordLength = strArr[1].length;
-        console.log(wordLength);
+        // console.log(wordLength);
         if (strArr[i].length > wordLength) {
             longestWord = strArr[i];
 
@@ -205,7 +205,8 @@ calculateTotalPrice(arr); */
     // Пиши код выше этой строки
 }
 
-console.log(findLongestWord('Google do a roll')); */
+console.log(findLongestWord('Google do a roll'));
+console.log(findLongestWord('May the force be with you'));
 
 //* #22
 
@@ -221,3 +222,140 @@ console.log(findLongestWord('Google do a roll')); */
 createArrayOfNumbers(1, 3); */
 
 //* #23
+
+/* function filterArray(numbers, value) {
+    // Пиши код ниже этой строки
+    let arrayChecked = [];
+    for (let i = 0; i <= numbers.length; i++) {
+        if (numbers[i] > value) {
+            arrayChecked.push(numbers[i]);
+        }
+    }
+    console.log(numbers);
+    console.log(arrayChecked);
+    return arrayChecked;
+    // Пиши код выше этой строки
+}
+
+filterArray([12, 24, 8, 41, 76], 20); */
+
+//* 25
+
+/* function getCommonElements(array1, array2) {
+    // Пиши код ниже этой строки
+    let array3 = [];
+    for (let index = 0; index < array1.length; index++) {
+        console.log(array2.includes(array1[index]));
+        if (array2.includes(array1[index])) {
+            array3.push(array1[index])
+        }
+    }
+
+
+
+
+    // Пиши код выше этой строки
+}
+
+getCommonElements([1, 3, 5], [0, 8, 5, 3]) */
+
+//* 26
+
+/* function calculateTotalPrice(order) {
+    let total = 0;
+    // Пиши код ниже этой строки
+
+    for (const ordered of order) {
+        total += ordered;
+    }
+    console.log(total);
+    // Пиши код выше этой строки
+    return total;
+}
+
+calculateTotalPrice([12, 85, 37, 4]); */
+// ===============================================
+// const planets = ['Земля', 'Марс', 'Венера'];
+
+// for (const planet of planets) {
+//     console.log(planet);
+// }
+// ===============================================
+
+/* console.log(3 % 1);
+console.log(4 % 3);
+console.log(11 % 4);
+console.log(12 % 7);
+console.log(8 % 3); */
+
+//* #29
+
+/* function getEvenNumbers(start, end) {
+    // Пиши код ниже этой строки
+    let array = [];
+    for (let i = start; i <= end; i++) {
+        console.log(i);
+        if (i % 2 === 0) {
+            array.push(i);
+        }
+    }
+    console.log(array);
+    return array;
+
+
+    // Пиши код выше этой строки
+}
+
+getEvenNumbers(2, 4); */
+
+//* #32
+/* 
+function includes(array, value) {
+    // Пиши код ниже этой строки
+
+    let result = false;
+    for (let i = 0; i < array.length; i++) {
+        console.log(array[i]);
+        if (array[i] === value) {
+            result = true;
+            break;
+        }
+    }
+
+    console.log(result);
+    return result;
+    // Пиши код выше этой строки
+}
+includes([1, 2, 3, 4, 5], 3); */
+
+
+
+
+//! ============MODULE-3============== !//
+//* #7
+
+const apartment = {
+    imgUrl: 'https://via.placeholder.com/640x480',
+    descr: 'Просторная квартира в центре',
+    rating: 4.7,
+    price: 5000,
+    tags: ['premium', 'promoted', 'top', 'trusted'],
+    owner: {
+        name: 'Генри Сибола',
+        phone: '982-126-1588',
+        email: 'henry.carter@aptmail.com'
+    }
+};
+
+// Пиши код ниже этой строки
+apartment.area = 60;
+apartment.rooms = 3;
+apartment.location = {};
+apartment.location.country = 'Ямайка';
+apartment.location.city = 'Ямайка';
+
+
+
+
+
+console.log(apartment);
