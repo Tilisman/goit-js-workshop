@@ -184,7 +184,7 @@ calculateTotalPrice(arr); */
 
 //! !!!#21!!! TODO: Разобраться почему [1]
 
-function findLongestWord(string) {
+/* function findLongestWord(string) {
     // Пиши код ниже этой строки
     let strArr = string.split(' ');
     let wordLength = 0;
@@ -207,7 +207,7 @@ function findLongestWord(string) {
 
 console.log(findLongestWord('Google do a roll'));
 console.log(findLongestWord('May the force be with you'));
-
+ */
 //* #22
 
 /* function createArrayOfNumbers(min, max) {
@@ -334,7 +334,7 @@ includes([1, 2, 3, 4, 5], 3); */
 //! ============MODULE-3============== !//
 //* #7
 
-const apartment = {
+/* const apartment = {
     imgUrl: 'https://via.placeholder.com/640x480',
     descr: 'Просторная квартира в центре',
     rating: 4.7,
@@ -358,4 +358,140 @@ apartment.location.city = 'Ямайка';
 
 
 
-console.log(apartment);
+console.log(apartment); */
+
+//* #10/11
+
+/* const apartment = {
+    descr: 'Просторная квартира в центре',
+    rating: 4,
+    price: 2153,
+};
+const keys = [];
+const values = [];
+// Пиши код ниже этой строки
+// for (const key in apartment) {
+//     keys.push(key);
+//     values.push(apartment[key]);
+// }
+for (const key in apartment) {
+    if (apartment.hasOwnProperty(key)) {
+        keys.push(key);
+        values.push(apartment[key]);
+    }
+}
+console.table(keys);
+console.table(values);
+console.log(apartment); */
+
+//* #12
+
+/* function countProps(object) {
+    let propCount = 0;
+    // Пиши код ниже этой строки
+    for (const key in object) {
+        if (object.hasOwnProperty(key)) {
+            propCount++;
+        }
+    }
+    // Пиши код выше этой строки
+    console.log(propCount);
+    return propCount;
+}
+
+
+countProps({ mail: 'poly@mail.com', isOnline: true, score: 500 }); */
+
+//* #13
+
+/* const apartment = {
+  descr: 'Просторная квартира в центре',
+  rating: 4,
+  price: 2153,
+};
+const values = [];
+// Пиши код ниже этой строки
+const keys = Object.keys(apartment);
+for(const key of keys){
+values.push(apartment[key]);
+} */
+
+//* #14
+
+/* function countProps(object) {
+    // Пиши код ниже этой строки
+    let propCount = 0;
+
+    const keys = Object.keys(object)
+    propCount = keys.length;
+
+    return propCount;
+
+}
+
+countProps({ mail: 'poly@mail.com', isOnline: true, score: 500 }); */
+
+//* #16
+
+/* function countTotalSalary(salaries) {
+    let totalSalary = 0;
+    // Пиши код ниже этой строки
+    const values = Object.values(salaries);
+    for (const value of values) {
+        totalSalary += value;
+    }
+    // Пиши код выше этой строки
+    console.log(totalSalary);
+    return totalSalary;
+}
+
+countTotalSalary({ mango: 100, poly: 150, alfred: 80 }); */
+
+
+//* #17
+
+/* const colors = [
+    { hex: '#f44336', rgb: '244,67,54' },
+    { hex: '#2196f3', rgb: '33,150,243' },
+    { hex: '#4caf50', rgb: '76,175,80' },
+    { hex: '#ffeb3b', rgb: '255,235,59' },
+];
+const hexColors = [];
+const rgbColors = [];
+// Пиши код ниже этой строки
+for (const color of colors) {
+    hexColors.push(color.hex);
+    rgbColors.push(color.rgb);
+}
+
+console.table(hexColors);
+console.table(rgbColors); */
+
+//* #18
+
+const products = [
+    { name: 'Радар', price: 1300, quantity: 4 },
+    { name: 'Сканер', price: 2700, quantity: 3 },
+    { name: 'Дроид', price: 400, quantity: 7 },
+    { name: 'Захват', price: 1200, quantity: 9 },
+];
+
+function getProductPrice(productName) {
+    // Пиши код ниже этой строки
+    let productPrice = null;
+    let values = Object.values(products)
+    for (const value of values) {
+        console.log(value);
+        if (value.name === productName) {
+            productPrice = value.price;
+        }
+
+    }
+    console.log(`${productName} price: ${productPrice}`);
+    return productPrice;
+    // Пиши код выше этой строки
+}
+getProductPrice('Радар');
+getProductPrice('Сканер');
+getProductPrice('Дроид');
+getProductPrice('Захват');
